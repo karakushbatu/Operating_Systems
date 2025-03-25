@@ -15,7 +15,7 @@ Developed as part of my coursework at **Istanbul Technical University – Comput
 
 ## 🛠 Technologies Used
 
-- `C++` for simulations and logic
+- `C` for simulations and logic
 - `POSIX threads (pthreads)` for synchronization
 - `ASCII terminal visualizations` (for showing execution timelines, etc.)
 
