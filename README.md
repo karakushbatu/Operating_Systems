@@ -1,4 +1,4 @@
-# 🖥️ Operating Systems Lab
+# 🖥️ Operating Systems 
 
 This repository contains my lab work, projects, and simulations related to Operating Systems concepts.  
 Developed as part of my coursework at **Istanbul Technical University – Computer Engineering**.
