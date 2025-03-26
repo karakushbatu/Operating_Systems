@@ -63,7 +63,7 @@ For example, to simulate jobA with a total execution time of 6 seconds:
 ```
 ## How it Works
 ### Scheduler Mode:
-	•	Reads jobs.txt to retrieve the time slice and job information.
+•	Reads jobs.txt to retrieve the time slice and job information.
 	•	Maintains a list of jobs including details such as arrival time, priority, total and remaining execution time, process ID, and input order.
 	•	Simulates time progression and, at each time slice, selects the next job based on:
 	•	Priority (lower numeric value = higher priority)
@@ -72,20 +72,20 @@ For example, to simulate jobA with a total execution time of 6 seconds:
 	•	Input Order (if all other criteria are equal)
 	•	If a job’s remaining execution time is less than or equal to the time slice, it is allowed to complete without preemption. Otherwise, the job is preempted with SIGSTOP after the time slice and resumed later using SIGCONT.
 ### Job Mode:
-	•	Simulates the execution of a single job by decrementing its execution time each second.
+•	Simulates the execution of a single job by decrementing its execution time each second.
 	•	Supports signal-based pausing (SIGSTOP) and resumption (SIGCONT), mimicking the behavior of preemptive scheduling.
 ### Logging:
-	•	Every significant event (fork, exec, time slice expiration with SIGSTOP, resume with SIGCONT, and termination) is logged with a timestamp in scheduler.log.
+•	Every significant event (fork, exec, time slice expiration with SIGSTOP, resume with SIGCONT, and termination) is logged with a timestamp in scheduler.log.
 	•	This log file provides a detailed trace of the scheduler’s operation for verification and debugging.
 
 ## Dependencies
-	•	GCC: GNU Compiler Collection for compiling the C source code.
+•	GCC: GNU Compiler Collection for compiling the C source code.
 	•	Unix-like Operating System: The scheduler is designed to run on systems such as Linux or macOS.
 	•	Make: For building the project using the provided makefile.
 	•	Docker (Optional): The scheduler is designed to run within a Docker container if required by the assignment.
 
 ## Additional Notes
-	•	The scheduler utilizes process control signals (SIGSTOP and SIGCONT) to manage job execution effectively. Completed jobs are terminated immediately without being resumed.
+•	The scheduler utilizes process control signals (SIGSTOP and SIGCONT) to manage job execution effectively. Completed jobs are terminated immediately without being resumed.
 	•	A screen recording demonstrating the scheduler’s execution is included in the submission package.
 	•	For any questions or further clarifications, please refer to the detailed report or contact the course instructor.
 
